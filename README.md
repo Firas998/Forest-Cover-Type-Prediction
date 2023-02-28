@@ -251,11 +251,6 @@ case we tried random forests, gradient boosting, KNN, SVM, logistic
 regression and neural networks. We got the following results (which you
 could find at the end of the notebook) :
 
-::: center
-![Comparison between the different models we
-tried](results.png){width="100%"}
-:::
-
 <p align="center" width="100%">
     <img src="https://user-images.githubusercontent.com/107106993/221859102-4d8742b6-5ce8-4f36-bc24-2518ab2215a0.png">
     
