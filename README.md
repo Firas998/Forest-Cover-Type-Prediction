@@ -256,6 +256,13 @@ could find at the end of the notebook) :
 tried](results.png){width="100%"}
 :::
 
+<p align="center" width="100%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859102-4d8742b6-5ce8-4f36-bc24-2518ab2215a0.png">
+    
+    Comparison between the different models we tried
+</p>
+
+
 # Conclusion
 
 In this project, we explored the Kaggle competition for predicting
