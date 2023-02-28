@@ -28,12 +28,15 @@ prediction of the cover type.
 The dataset for this problem includes twelve features among which ten
 are numerical and two are catrgorical.
 
-The numerical values are presented in the following table:\
+The numerical values are presented in the following table:
 
-::: center
-![Numerical features
-description](numerical_data_explained.png){width="40%"}
-:::
+
+<p align="center" width="100%">
+    <img width="40%" src="https://user-images.githubusercontent.com/107106993/221859092-01b77166-0b9a-4fe1-8c25-d0160ac6b491.png">
+    
+    Numerical features description
+</p>
+
 
 The two categorical features are the wilderness area (4 categories) and
 the soil type (40 categories). Since the data is already one-hot
@@ -46,9 +49,13 @@ We first start by checking for null values or duplicates in our dataset.
 None are found.\
 We then check that the dataset is balanced.
 
-::: center
-![Number of samples per cover type](uniform.png){width="30%"}
-:::
+
+<p align="center" width="100%">
+    <img width="30%" src="https://user-images.githubusercontent.com/107106993/221859107-6c78db70-43dd-4804-b010-713526322d75.png">
+    
+    Number of samples per covertype
+</p>
+
 
 After that we divide the dataset between numerical and categorical
 features.
@@ -68,9 +75,14 @@ Roadways, to FirePoints). We therefore need to study the correlation
 with the Cover Type to see which features we need to retain and which we
 could discard.\
 
-::: center
-![Correlation matrix between numerical features](corr.png){width="90%"}
-:::
+
+<p align="center" width="90%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859086-80ea808c-22f6-42cb-9662-8398b656b9c7.png">
+    
+    Correlation matrix between numerical features
+</p>
+
+
 
 In order to do so we performed one-hot encoding on the Cover Type to get
 7 new binary variables. We then computed the correlations of the
@@ -81,18 +93,22 @@ discarded because they have low correlations with the target. All other
 features, including the distance-based ones, were retained because they
 had strong correlations with the target variable.
 
-::: center
-![Correlation between features and target](photo2.jpg){width="50%"}
-:::
-
+<p align="center" width="50%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859097-23919f43-93ef-48a0-8657-6322c16d8d5d.jpg">
+    
+    Correlation between features and target
+</p>
 #### Transformation of features using skewness
 
 Additionally, we look at the data distribution of all numerical values
 to study the skewness :\
 
-::: center
-![Density graph of the numerical features](Skewness.png){width="50%"}
-:::
+
+<p align="center" width="50%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859105-42179cd8-14f9-46da-ac21-f38d4a2ada46.png">
+    
+    Density graph of the numerical features
+</p>
 
 We apply the logarithmic function (log(x+1)) for right-skewed data and
 the square function for left-skewed data.\
@@ -158,14 +174,19 @@ have the highest correlation rate with the cover type as proceeded in
 the analysis. Thus we created a list containing all the features we want
 to take into consideration, and we dropped the rest.
 
-::: center
-![Correlation between the features and the
-target](corr2.jpg){width="35%"}
-:::
+<p align="center" width="35%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859080-dede579f-7b02-4b34-94ac-3574a65509a2.png">
+    
+    Correlation between the features and the target
+</p>
 
-::: center
-![List of the selected features](chosen.png){width="90%"}
-:::
+
+<p align="center" width="90%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859091-4d6740fc-5854-40e0-8c1a-bb1c8dd74ff3.jpg">
+    
+    List of the selected features
+</p>
+
 
 #### Scaling numerical features
 
@@ -204,15 +225,20 @@ The model produced good results by outperforming all the other models we
 tried. Here are the performance metrics that we got from the
 cross-validation approach:\
 
-::: center
-![ETC model performance metrics](tableau.png){width="35%"}
-:::
+<p align="center" width="35%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859106-59d3803e-8b6d-4b60-a0b7-96cbaac4bd17.png">
+    
+    ETC model performance metrics
+</p>
 
 As for the confusion matrix we got the following diagram:
 
-::: center
-![Confusion Matrix for the ETC model](Confusion matrix.png){width="70%"}
-:::
+
+<p align="center" width="70%">
+    <img src="https://user-images.githubusercontent.com/107106993/221859083-60fb2c38-70e3-4b92-a1f2-a161222b6e2d.png">
+    
+    Confusion Matrix for the ETC model
+</p>
 
 In this confusion we can see that there is a high rate of confusion
 between cover type 1 and cover type 2.
